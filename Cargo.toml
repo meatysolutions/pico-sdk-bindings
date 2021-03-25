@@ -1,0 +1,8 @@
+[workspace]
+members = [
+  "./native",
+]
+
+[profile.release]
+debug = true
+lto = true
