@@ -129,7 +129,7 @@ pub extern "C" fn device_open(
                 Some(_) => Err(anyhow!("Multiple devices found")),
             }
         } else {
-            let device = found_devices.pop().unwrap().to_streaming_device();
+            let device = found_devices.pop().unwrap().into_streaming_device();
             Ok(Box::into_raw(Box::new(device)))
         }
     })
